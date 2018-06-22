@@ -1,0 +1,24 @@
+{
+  "name": "doesitmutate.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build && next export && cp now.json out",
+    "start": "next start",
+    "deploy": "npm run build; cd out; now"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "isomorphic-unfetch": "^2.0.0",
+    "next": "^6.0.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
+    "@remy/eslint": "^2.0.0"
+  }
+}

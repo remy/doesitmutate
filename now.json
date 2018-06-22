@@ -1,0 +1,8 @@
+{
+  "type": "static",
+  "static": {
+    "cleanUrls": true
+  },
+  "alias": "doesitmutate.com",
+  "name": "doesitmutate"
+}

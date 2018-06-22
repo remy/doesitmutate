@@ -1,0 +1,152 @@
+[
+  {
+    "method": "concat",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat",
+    "sample": "<section class=\"prog__container\"><p>The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.</p><pre><code>Array.prototype.concat ( [ item1 [ , item2 [ , … ] ] ] )</code></pre></section>"
+  },
+  {
+    "method": "copyWithin()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin",
+    "sample": "<section class=\"prog__container\"><p>The copyWithin() method shallow copies part of an array to another location in the same array and returns it, without modifying its size.</p><pre><code>arr.copyWithin(target)\narr.copyWithin(target, start)\narr.copyWithin(target, start, end)\n</code></pre></section>"
+  },
+  {
+    "method": "entries()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/entries",
+    "sample": "<section class=\"prog__container\"><p>The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.</p><pre><code>a.entries()</code></pre></section>"
+  },
+  {
+    "method": "every",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every",
+    "sample": "<section class=\"prog__container\"><p>The every() method tests whether all elements in the array pass the test implemented by the provided function.</p><pre><code>Array.prototype.every ( callbackfn [ , thisArg ] )</code></pre></section>"
+  },
+  {
+    "method": "fill()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill",
+    "sample": "<section class=\"prog__container\"><p>The fill() method fills all the elements of an array from a start index to an end index with a static value.</p><pre><code>arr.fill(value)\narr.fill(value, start)\narr.fill(value, start, end)\n</code></pre></section>"
+  },
+  {
+    "method": "filter",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter",
+    "sample": "<section class=\"prog__container\"><p>The filter() method creates a new array with all elements that pass the test implemented by the provided function.</p><pre><code>Array.prototype.filter ( callbackfn [ , thisArg ] )</code></pre></section>"
+  },
+  {
+    "method": "find()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find",
+    "sample": "<section class=\"prog__container\"><p>The find() method returns a value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned.</p><pre><code>arr.find(callback[, thisArg])</code></pre></section>"
+  },
+  {
+    "method": "findIndex()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex",
+    "sample": "<section class=\"prog__container\"><p>The findIndex() method returns an index of the first element in the array that satisfies the provided testing function. Otherwise -1 is returned.</p><pre><code>arr.findIndex(callback[, thisArg])</code></pre></section>"
+  },
+  {
+    "method": "forEach",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach",
+    "sample": "<section class=\"prog__container\"><p>The forEach() method executes a provided function once per array element.</p><pre><code>Array.prototype.forEach ( callbackfn [ , thisArg ] )</code></pre></section>"
+  },
+  {
+    "method": "includes()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes",
+    "sample": "<section class=\"prog__container\"><p>The includes() method determines whether an array includes a certain element, returning true or false as appropriate.</p><pre><code>arr.includes(searchElement)\narr.includes(searchElement, fromIndex)\n</code></pre></section>"
+  },
+  {
+    "method": "indexOf",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf",
+    "sample": "<section class=\"prog__container\"><p>The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.</p><pre><code>Array.prototype.indexOf ( searchElement [ , fromIndex ] )</code></pre></section>"
+  },
+  {
+    "method": "join",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join",
+    "sample": "<section class=\"prog__container\"><p>The join() method joins all elements of an array into a string.</p><pre><code>Array.prototype.join (separator)</code></pre></section>"
+  },
+  {
+    "method": "keys()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys",
+    "sample": "<section class=\"prog__container\"><p>The keys() method returns a new Array Iterator that contains the keys for each index in the array.</p><pre><code>arr.keys()</code></pre></section>"
+  },
+  {
+    "method": "lastIndexOf",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf",
+    "sample": "<section class=\"prog__container\"><p>The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.</p><pre><code>Array.prototype.lastIndexOf ( searchElement [ , fromIndex ] )</code></pre></section>"
+  },
+  {
+    "method": "map",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map",
+    "sample": "<section class=\"prog__container\"><p>The map() method creates a new array with the results of calling a provided function on every element in this array.</p><pre><code>Array.prototype.map ( callbackfn [ , thisArg ] )</code></pre></section>"
+  },
+  {
+    "method": "pop",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop",
+    "sample": "<section class=\"prog__container\"><p>The pop() method removes the last element from an array and returns that element. This method changes the length of the array.</p><pre><code>Array.prototype.pop ( )</code></pre></section>"
+  },
+  {
+    "method": "push",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push",
+    "sample": "<section class=\"prog__container\"><p>The push() method adds one or more elements to the end of an array and returns the new length of the array.</p><pre><code>Array.prototype.push ( [ item1 [ , item2 [ , … ] ] ] )</code></pre></section>"
+  },
+  {
+    "method": "reduce",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce",
+    "sample": "<section class=\"prog__container\"><p>The reduce() method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.</p><pre><code>Array.prototype.reduce ( callbackfn [ , initialValue ] )</code></pre></section>"
+  },
+  {
+    "method": "reduceRight",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight",
+    "sample": "<section class=\"prog__container\"><p>The reduceRight() method applies a function against an accumulator and each value of the array (from right-to-left) has to reduce it to a single value.</p><pre><code>Array.prototype.reduceRight ( callbackfn [ , initialValue ] )</code></pre></section>"
+  },
+  {
+    "method": "reverse",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse",
+    "sample": "<section class=\"prog__container\"><p>The reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.</p><pre><code>Array.prototype.reverse ( )</code></pre></section>"
+  },
+  {
+    "method": "shift",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift",
+    "sample": "<section class=\"prog__container\"><p>The shift() method removes the first element from an array and returns that element. This method changes the length of the array.</p><pre><code>Array.prototype.shift ( )</code></pre></section>"
+  },
+  {
+    "method": "slice",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+    "sample": "<section class=\"prog__container\"><p>The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified.</p><pre><code>Array.prototype.slice (start, end)</code></pre></section>"
+  },
+  {
+    "method": "some",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some",
+    "sample": "<section class=\"prog__container\"><p>The some() method tests whether some element in the array passes the test implemented by the provided function.</p><pre><code>Array.prototype.some ( callbackfn [ , thisArg ] )</code></pre></section>"
+  },
+  {
+    "method": "sort",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort",
+    "sample": "<section class=\"prog__container\"><p>The sort() method sorts the elements of an array in place and returns the array. The sort is not necessarily stable. The default sort order is according to string Unicode code points.</p><pre><code>Array.prototype.sort (comparefn)</code></pre></section>"
+  },
+  {
+    "method": "splice",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice",
+    "sample": "<section class=\"prog__container\"><p>The splice() method changes the content of an array by removing existing elements and/or adding new elements.</p><pre><code>Array.prototype.splice (start, deleteCount [ , item1 [ , item2 [ , … ] ] ] )</code></pre></section>"
+  },
+  {
+    "method": "toLocaleString",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString",
+    "sample": "<section class=\"prog__container\"><p>The toLocaleString() method returns a string representing the elements of the array. The elements are converted to Strings using their toLocaleString methods and these Strings are separated by a locale-specific String (such as a comma “,”).</p><pre><code>Array.prototype.toLocaleString ( )</code></pre></section>"
+  },
+  {
+    "method": "toSource()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource",
+    "sample": "<section class=\"prog__container\"><p>The toSource() method returns a string representing the source code of the array.</p><pre><code>arr.toSource()</code></pre></section>"
+  },
+  {
+    "method": "toString",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString",
+    "sample": "<section class=\"prog__container\"><p>The toString() method returns a string representing the specified array and its elements.</p><pre><code>Array.prototype.toString ( )</code></pre></section>"
+  },
+  {
+    "method": "unshift",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift",
+    "sample": "<section class=\"prog__container\"><p>The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.</p><pre><code>Array.prototype.unshift ( [ item1 [ , item2 [ , … ] ] ] )</code></pre></section>"
+  },
+  {
+    "method": "values()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values",
+    "sample": "<section class=\"prog__container\"><p>The values() method returns a new Array Iterator object that contains the values for each index in the array.</p><pre><code>arr.values()</code></pre></section>"
+  }
+]
