@@ -8,8 +8,7 @@ export default class Method extends Component {
   state = { example: 'Loading…' };
 
   async componentDidMount() {
-    let method = this.props.method;
-    method = method.replace(/\(\)/g, '').toLowerCase();
+    let method = this.props.clean;
 
     if (method === 'reduceright') {
       method = 'reduce-right';
@@ -31,7 +30,10 @@ export default class Method extends Component {
     const { example } = this.state;
     return (
       <div id={method.replace(/\(\)/g, '').toLowerCase()} className="method">
-        <h2>Array.prototype.{method}</h2>
+        <h2>
+          <span>Array.prototype</span>
+          .{method}
+        </h2>
         <p className={`mutates ${mutates ? 'yes' : 'no'}`}>
           {mutates ? 'Mutates' : 'No mutation'}
         </p>

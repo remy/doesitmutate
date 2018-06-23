@@ -18,13 +18,12 @@ const mutators = [
 
 // ironically: mutate
 data.forEach(_ => {
-  _.mutates = mutators.includes(_.method);
+  _.clean = _.method.replace(/\(\)/g, '').toLowerCase();
+  _.mutates = mutators.includes(_.clean);
 });
 
 const filterMethods = ({ filter, methods }) => {
-  return [
-    methods.find(_ => filter === _.method.replace(/\(\)/g, '').toLowerCase()),
-  ];
+  return [methods.find(_ => filter === _.clean)];
 };
 
 const Page = ({ methods }) => (
@@ -44,7 +43,7 @@ const Page = ({ methods }) => (
   </>
 );
 
-Page.getInitialProps = ({ query }) => {
+Page.getInitialProps = ({ query = {} }) => {
   let methods = data;
 
   if (query.method) {

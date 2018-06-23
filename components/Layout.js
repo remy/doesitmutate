@@ -35,6 +35,10 @@ export default ({ children }) => (
           line-height: 1.6em;
         }
 
+        h2 span {
+          display: none;
+        }
+
         h3 {
           margin-top: 2em;
         }
@@ -65,6 +69,7 @@ export default ({ children }) => (
           overflow: auto;
           padding: 10px;
         }
+
         .mutates {
           --yes: rgb(233, 30, 99);
           --no: rgb(76, 175, 80);
