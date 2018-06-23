@@ -12,6 +12,8 @@ const mutators = [
   'push',
   'splice',
   'reverse',
+  'fill',
+  'copyWithin',
 ];
 
 // ironically: mutate
