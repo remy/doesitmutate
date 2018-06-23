@@ -13,7 +13,7 @@ const mutators = [
   'splice',
   'reverse',
   'fill',
-  'copyWithin',
+  'copywithin',
 ];
 
 // ironically: mutate
