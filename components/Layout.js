@@ -70,12 +70,25 @@ export default ({ children }) => (
           padding: 10px;
         }
 
-        .mutates {
+        .btn-grp > .btn:first-child:not(:last-child) {
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+        }
+
+        .btn-grp > .btn:not(:last-child):not(:first-child) {
+          border-radius: 0;
+        }
+
+        .btn-grp > .btn:last-child:not(:first-child) {
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0;
+        }
+
+        .btn {
           --yes: rgb(233, 30, 99);
+          --maybe: rgb(33, 33, 33);
           --no: rgb(76, 175, 80);
-          position: absolute;
-          top: 0;
-          right: 20px;
+          color: rgb(186, 186, 186);
           text-transform: lowercase;
           border-width: 3px;
           border-style: solid;
@@ -87,9 +100,19 @@ export default ({ children }) => (
           margin: 10px 0 0;
         }
 
+        .mutates {
+          position: absolute;
+          top: 0;
+          right: 20px;
+        }
+
         .yes {
           color: var(--yes);
           border-color: var(--yes);
+        }
+        .maybe {
+          color: var(--maybe);
+          border-color: var(--maybe);
         }
         .no {
           color: var(--no);

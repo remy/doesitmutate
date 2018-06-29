@@ -34,7 +34,7 @@ export default class Method extends Component {
           <span>Array.prototype</span>
           .{method}
         </h2>
-        <p className={`mutates ${mutates ? 'yes' : 'no'}`}>
+        <p className={`btn mutates ${mutates ? 'yes' : 'no'}`}>
           {mutates ? 'Mutates' : 'No mutation'}
         </p>
         <h3>Description</h3>
