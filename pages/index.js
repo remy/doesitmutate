@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import { Component } from 'react';
 import Method from '../components/Method';
+
 // source: https://github.com/duckduckgo/zeroclickinfo-fathead/tree/master/lib/fathead/mdnjs
+// and mixed with examples from Mozilla's
 import data from '../array-methods.json';
 
 const mutators = [
@@ -30,9 +32,25 @@ const Page = ({ methods }) => (
   <>
     <Head>
       {methods.length === 1 ? (
-        <title>{methods[0].mutates ? '!mutates' : 'no mutation'}</title>
+        <>
+          <title>{methods[0].mutates ? '!mutates' : 'no mutation'}</title>
+          <link
+            rel="icon"
+            sizes="32x32"
+            key="favicon"
+            href={`/static/${methods[0].mutates ? 'yes' : 'no'}.png`}
+          />
+        </>
       ) : (
-        <title>Does it mutate?</title>
+        <>
+          <title>Does it mutate?</title>
+          <link
+            rel="icon"
+            sizes="32x32"
+            key="favicon"
+            href={`/static/favicon.png`}
+          />
+        </>
       )}
     </Head>
 
