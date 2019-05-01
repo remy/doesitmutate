@@ -1,0 +1,15 @@
+{% block meta %}
+<link rel="icon" sizes="32x32" key="favicon" href="/img/{% if method.mutates %}yes{% else %}no{% endif %}.png">
+{% endblock %}
+
+<div class="method">
+  <h2><span>Array.prototype</span>.<a href="/{{method.clean}}">{{method.method}}</a></h2>
+  <p class="mutates {% if method.mutates %}yes{% else %}no{% endif %}">
+    {% if method.mutates %}Mutates{% else %}No mutation{% endif %}
+  </p>
+  <h3>Description</h3>
+  <div> {{ method.sample | safe }} </div>
+  <p><a href="{{method.url}}">{{method.url}}</a></p>
+  <h3>Example</h3>
+  <div> {{ method.example | safe }} </div>
+</div>

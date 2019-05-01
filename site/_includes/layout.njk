@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or "Does it mutate?" }}</title>
+    {% block meta %}
+      <link
+        rel="icon"
+        sizes="32x32"
+        key="favicon"
+        href="/img/favicon.png"
+      />
+    {% endblock %}
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <main>
+      <h1>Does it mutate 😱</h1>
+      {{ content | safe }}
+    </main>
+    <footer>
+      <p>
+        Made by <a href="https://twitter.com/rem">@rem</a>
+      </p>
+    </footer>
+  </body>
+</html>

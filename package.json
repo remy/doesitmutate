@@ -19,6 +19,7 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^0.8.2",
     "@remy/eslint": "^2.0.0"
   }
 }
