@@ -7,4 +7,5 @@ permalink: /{{ method.clean }}/index.html
 layout: layout.njk
 ---
 
-{% include method.njk %}
+{% from "method.njk" import render %}
+{{ render(method) }}

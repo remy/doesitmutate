@@ -3,6 +3,8 @@ layout: layout.njk
 permalink: /index.html
 ---
 
+{% from "method.njk" import render %}
+
 {%for method in methods %}
-  {%include method.njk %}
+  {{ render(method) }}
 {% endfor %}

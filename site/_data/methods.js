@@ -72,6 +72,25 @@ const methods = [
       '<pre>\n<code id="static-js">var array1 = [5, 12, 8, 130, 44];\n\nfunction isLargeNumber(element) {\n  return element > 13;\n}\n\nconsole.log(array1.findIndex(isLargeNumber));\n// expected output: 3\n</code>\n</pre>\n',
   },
   {
+    method: 'flat',
+    url:
+      'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat',
+    sample:
+      '<section class="prog__container"><p>The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.</p><pre><code>var newArray = arr.flat([depth]);</code></pre></section>',
+    example:
+      '<pre>\n<code id="static-js">var arr1 = [1, 2, [3, 4]];\narr1.flat(); \n// [1, 2, 3, 4]\n\nvar arr2 = [1, 2, [3, 4, [5, 6]]];\narr2.flat();\n// [1, 2, 3, 4, [5, 6]]\n\nvar arr3 = [1, 2, [3, 4, [5, 6]]];\narr3.flat(2);\n// [1, 2, 3, 4, 5, 6]\n\nvar arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];\narr4.flat(Infinity);\n// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</code>\n</pre>\n',
+  },
+  {
+    method: 'flatMap',
+    url:
+      'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap',
+    sample:
+      '<section class="prog__container"><p>The flatMap() method first maps each element using a mapping function, then flattens the result into a new array. It is identical to a map() followed by a flat() of depth 1, but flatMap() is often quite useful, as merging both into one method is slightly more efficient.</p><pre><code>var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {\n    // return element for new_array\n}[, thisArg])</code></pre></section>',
+
+    example:
+      '<pre>\n<code id="static-js">let arr1 = [1, 2, 3, 4];\n\narr1.map(x => [x * 2]); \n// [[2], [4], [6], [8]]\n\narr1.flatMap(x => [x * 2]);\n// [2, 4, 6, 8]\n\n// only one level is flattened\narr1.flatMap(x => [[x * 2]]);\n// [[2], [4], [6], [8]]</code>\n</pre>\n',
+  },
+  {
     method: 'forEach',
     url:
       'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach',

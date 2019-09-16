@@ -3,7 +3,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./site/css');
 
   return {
-    templateFormats: ['md'],
+    templateFormats: ['njk'],
     passthroughFileCopy: true,
     dir: {
       input: 'site',

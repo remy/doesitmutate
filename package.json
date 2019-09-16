@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true
+  },
   "scripts": {
     "dev": "next",
     "build": "next build && next export && cp now.json out",
