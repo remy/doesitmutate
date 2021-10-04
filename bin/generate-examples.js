@@ -1,4 +1,4 @@
-const methods = require('./array-methods.json');
+const methods = require('../array-methods.json');
 const fetch = require('isomorphic-unfetch');
 
 // one that's missing
@@ -16,7 +16,7 @@ async function main() {
         method = 'reduce-right';
       }
 
-      return fetch(`${API}${method}.html`)
+      return fetch(`${API}${method}.js`)
         .then(res => {
           if (res.status === 404) {
             if (method === 'tosource') {
