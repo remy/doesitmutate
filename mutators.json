@@ -1,0 +1,11 @@
+[
+  "sort",
+  "shift",
+  "unshift",
+  "pop",
+  "push",
+  "splice",
+  "reverse",
+  "fill",
+  "copywithin"
+]

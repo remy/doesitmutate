@@ -1,28 +1,28 @@
 {
-  "name": "doesitmutate.com",
+  "name": "doesitmutate.xyz",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Source code to doesitmutate.xyz using 11ty",
+  "engines": {
+    "node": "20.x"
+  },
   "prettier": {
     "trailingComma": "es5",
     "singleQuote": true
   },
   "scripts": {
-    "dev": "next",
-    "build": "next build && next export && cp now.json out",
-    "start": "next start",
-    "deploy": "npm run build; cd out; now"
+    "dev": "DEBUG=-11ty* npx @11ty/eleventy --serve"
   },
   "keywords": [],
   "author": "Remy Sharp",
   "license": "MIT",
-  "dependencies": {
-    "isomorphic-unfetch": "^3.0.0",
-    "next": "^7.0.3",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  },
   "devDependencies": {
-    "@remy/eslint": "^2.0.0"
+    "@11ty/eleventy": "^2.0.1",
+    "@remy/eslint": "^3.2.2",
+    "markdown-it": "^14.0.0"
+  },
+  "dependencies": {
+    "markdown-it-attrs": "^4.1.6",
+    "markdown-it-named-headings": "^1.1.0",
+    "markdown-it-prism": "^2.3.0"
   }
 }

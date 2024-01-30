@@ -1,0 +1,306 @@
+[
+  {
+    "title": "Array.prototype.at()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at",
+    "name": "at",
+    "synopsis": "The **`at()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.",
+    "syntax": "Array.prototype.at(index)",
+    "example": "const array1 = [5, 12, 8, 130, 44];\n\nlet index = 2;\n\nconsole.log(`An index of ${index} returns ${array1.at(index)}`);\n// Expected output: \"An index of 2 returns 8\"\n\nindex = -2;\n\nconsole.log(`An index of ${index} returns ${array1.at(index)}`);\n// Expected output: \"An index of -2 returns 130\"\n"
+  },
+  {
+    "title": "Array.prototype.concat()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat",
+    "name": "concat",
+    "synopsis": "The **`concat()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances is used to merge two or more arrays.\nThis method does not change the existing arrays, but instead returns a new array.",
+    "syntax": "Array.prototype.concat(value1, value2, /* …, */ valueN)",
+    "example": "const array1 = ['a', 'b', 'c'];\nconst array2 = ['d', 'e', 'f'];\nconst array3 = array1.concat(array2);\n\nconsole.log(array3);\n// Expected output: Array [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]\n"
+  },
+  {
+    "title": "Array.prototype.copyWithin()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin",
+    "name": "copyWithin",
+    "synopsis": "The **`copyWithin()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances shallow copies part of this array to another location in the same array and returns this array without modifying its length.",
+    "syntax": "Array.prototype.copyWithin(target, start, end)",
+    "example": "const array1 = ['a', 'b', 'c', 'd', 'e'];\n\n// Copy to index 0 the element at index 3\nconsole.log(array1.copyWithin(0, 3, 4));\n// Expected output: Array [\"d\", \"b\", \"c\", \"d\", \"e\"]\n\n// Copy to index 1 all elements from index 3 to the end\nconsole.log(array1.copyWithin(1, 3));\n// Expected output: Array [\"d\", \"d\", \"e\", \"d\", \"e\"]\n"
+  },
+  {
+    "title": "Array.prototype.fill()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill",
+    "name": "fill",
+    "synopsis": "The **`fill()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances changes all elements within a range of indices in an array to a static value. It returns the modified array.",
+    "syntax": "Array.prototype.fill(value, start, end)",
+    "example": "const array1 = [1, 2, 3, 4];\n\n// Fill with 0 from position 2 until position 4\nconsole.log(array1.fill(0, 2, 4));\n// Expected output: Array [1, 2, 0, 0]\n\n// Fill with 5 from position 1\nconsole.log(array1.fill(5, 1));\n// Expected output: Array [1, 5, 5, 5]\n\nconsole.log(array1.fill(6));\n// Expected output: Array [6, 6, 6, 6]\n"
+  },
+  {
+    "title": "Array.prototype.find()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find",
+    "name": "find",
+    "synopsis": "The **`find()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances returns the first element in the provided array that satisfies the provided testing function.\nIf no values satisfy the testing function, [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) is returned.",
+    "syntax": "Array.prototype.find(callbackFn, thisArg)",
+    "example": "const array1 = [5, 12, 8, 130, 44];\n\nconst found = array1.find((element) => element > 10);\n\nconsole.log(found);\n// Expected output: 12\n"
+  },
+  {
+    "title": "Array.prototype.findIndex()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex",
+    "name": "findIndex",
+    "synopsis": "The **`findIndex()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances returns the index of the first element in an array that satisfies the provided testing function.\nIf no elements satisfy the testing function, -1 is returned.",
+    "syntax": "Array.prototype.findIndex(callbackFn, thisArg)",
+    "example": "const array1 = [5, 12, 8, 130, 44];\n\nconst isLargeNumber = (element) => element > 13;\n\nconsole.log(array1.findIndex(isLargeNumber));\n// Expected output: 3\n"
+  },
+  {
+    "title": "Array.prototype.findLast()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast",
+    "name": "findLast",
+    "synopsis": "The **`findLast()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function.\nIf no elements satisfy the testing function, [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) is returned.",
+    "syntax": "Array.prototype.findLast(callbackFn, thisArg)",
+    "example": "const array1 = [5, 12, 50, 130, 44];\n\nconst found = array1.findLast((element) => element > 45);\n\nconsole.log(found);\n// Expected output: 130\n"
+  },
+  {
+    "title": "Array.prototype.findLastIndex()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex",
+    "name": "findLastIndex",
+    "synopsis": "The **`findLastIndex()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function.\nIf no elements satisfy the testing function, -1 is returned.",
+    "syntax": "Array.prototype.findLastIndex(callbackFn, thisArg)",
+    "example": "const array1 = [5, 12, 50, 130, 44];\n\nconst isLargeNumber = (element) => element > 45;\n\nconsole.log(array1.findLastIndex(isLargeNumber));\n// Expected output: 3\n// Index of element with value: 130\n"
+  },
+  {
+    "title": "Array.prototype.lastIndexOf()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf",
+    "name": "lastIndexOf",
+    "synopsis": "The **`lastIndexOf()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances returns the last index at which\na given element can be found in the array, or -1 if it is not present. The array is\nsearched backwards, starting at `fromIndex`.",
+    "syntax": "Array.prototype.lastIndexOf(searchElement, fromIndex)",
+    "example": "const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];\n\nconsole.log(animals.lastIndexOf('Dodo'));\n// Expected output: 3\n\nconsole.log(animals.lastIndexOf('Tiger'));\n// Expected output: 1\n"
+  },
+  {
+    "title": "Array.prototype.pop()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop",
+    "name": "pop",
+    "synopsis": "The **`pop()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances removes the **last**\nelement from an array and returns that element. This method changes the length of the\narray.",
+    "syntax": "Array.prototype.pop()",
+    "example": "const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];\n\nconsole.log(plants.pop());\n// Expected output: \"tomato\"\n\nconsole.log(plants);\n// Expected output: Array [\"broccoli\", \"cauliflower\", \"cabbage\", \"kale\"]\n\nplants.pop();\n\nconsole.log(plants);\n// Expected output: Array [\"broccoli\", \"cauliflower\", \"cabbage\"]\n"
+  },
+  {
+    "title": "Array.prototype.push()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push",
+    "name": "push",
+    "synopsis": "The **`push()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances adds the specified elements to the end of\nan array and returns the new length of the array.",
+    "syntax": "Array.prototype.push(element1, element2, /* …, */ elementN)",
+    "example": "const animals = ['pigs', 'goats', 'sheep'];\n\nconst count = animals.push('cows');\nconsole.log(count);\n// Expected output: 4\nconsole.log(animals);\n// Expected output: Array [\"pigs\", \"goats\", \"sheep\", \"cows\"]\n\nanimals.push('chickens', 'cats', 'dogs');\nconsole.log(animals);\n// Expected output: Array [\"pigs\", \"goats\", \"sheep\", \"cows\", \"chickens\", \"cats\", \"dogs\"]\n"
+  },
+  {
+    "title": "Array.prototype.reverse()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse",
+    "name": "reverse",
+    "synopsis": "The **`reverse()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances reverses an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, the first array element now becoming the last, and the last array element becoming the first. In other words, elements order in the array will be turned towards the direction opposite to that previously stated.",
+    "syntax": "Array.prototype.reverse()",
+    "example": "const array1 = ['one', 'two', 'three'];\nconsole.log('array1:', array1);\n// Expected output: \"array1:\" Array [\"one\", \"two\", \"three\"]\n\nconst reversed = array1.reverse();\nconsole.log('reversed:', reversed);\n// Expected output: \"reversed:\" Array [\"three\", \"two\", \"one\"]\n\n// Careful: reverse is destructive -- it changes the original array.\nconsole.log('array1:', array1);\n// Expected output: \"array1:\" Array [\"three\", \"two\", \"one\"]\n"
+  },
+  {
+    "title": "Array.prototype.shift()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift",
+    "name": "shift",
+    "synopsis": "The **`shift()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances removes the **first**\nelement from an array and returns that removed element. This method changes the length\nof the array.",
+    "syntax": "Array.prototype.shift()",
+    "example": "const array1 = [1, 2, 3];\n\nconst firstElement = array1.shift();\n\nconsole.log(array1);\n// Expected output: Array [2, 3]\n\nconsole.log(firstElement);\n// Expected output: 1\n"
+  },
+  {
+    "title": "Array.prototype.unshift()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift",
+    "name": "unshift",
+    "synopsis": "The **`unshift()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances adds the specified elements to the\nbeginning of an array and returns the new length of the array.",
+    "syntax": "Array.prototype.unshift(element1, element2, /* …, */ elementN)",
+    "example": "const array1 = [1, 2, 3];\n\nconsole.log(array1.unshift(4, 5));\n// Expected output: 5\n\nconsole.log(array1);\n// Expected output: Array [4, 5, 1, 2, 3]\n"
+  },
+  {
+    "title": "Array.prototype.slice()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+    "name": "slice",
+    "synopsis": "The **`slice()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of\nan array into a new array object selected from `start` to `end`\n(`end` not included) where `start` and `end` represent\nthe index of items in that array. The original array will not be modified.",
+    "syntax": "Array.prototype.slice(start, end)",
+    "example": "const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];\n\nconsole.log(animals.slice(2));\n// Expected output: Array [\"camel\", \"duck\", \"elephant\"]\n\nconsole.log(animals.slice(2, 4));\n// Expected output: Array [\"camel\", \"duck\"]\n\nconsole.log(animals.slice(1, 5));\n// Expected output: Array [\"bison\", \"camel\", \"duck\", \"elephant\"]\n\nconsole.log(animals.slice(-2));\n// Expected output: Array [\"duck\", \"elephant\"]\n\nconsole.log(animals.slice(2, -1));\n// Expected output: Array [\"camel\", \"duck\"]\n\nconsole.log(animals.slice());\n// Expected output: Array [\"ant\", \"bison\", \"camel\", \"duck\", \"elephant\"]\n"
+  },
+  {
+    "title": "Array.prototype.sort()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort",
+    "name": "sort",
+    "synopsis": "The **`sort()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.",
+    "syntax": "Array.prototype.sort(compareFn)",
+    "example": "const months = ['March', 'Jan', 'Feb', 'Dec'];\nmonths.sort();\nconsole.log(months);\n// Expected output: Array [\"Dec\", \"Feb\", \"Jan\", \"March\"]\n\nconst array1 = [1, 30, 4, 21, 100000];\narray1.sort();\nconsole.log(array1);\n// Expected output: Array [1, 100000, 21, 30, 4]\n"
+  },
+  {
+    "title": "Array.prototype.splice()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice",
+    "name": "splice",
+    "synopsis": "The **`splice()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances changes the contents of an array by\nremoving or replacing existing elements and/or adding new elements [in place](https://en.wikipedia.org/wiki/In-place_algorithm).",
+    "syntax": "Array.prototype.splice(start, deleteCount, item1, item2, /* …, */ itemN)",
+    "example": "const months = ['Jan', 'March', 'April', 'June'];\nmonths.splice(1, 0, 'Feb');\n// Inserts at index 1\nconsole.log(months);\n// Expected output: Array [\"Jan\", \"Feb\", \"March\", \"April\", \"June\"]\n\nmonths.splice(4, 1, 'May');\n// Replaces 1 element at index 4\nconsole.log(months);\n// Expected output: Array [\"Jan\", \"Feb\", \"March\", \"April\", \"May\"]\n"
+  },
+  {
+    "title": "Array.prototype.includes()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes",
+    "name": "includes",
+    "synopsis": "The **`includes()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances determines whether an array\nincludes a certain value among its entries, returning `true` or\n`false` as appropriate.",
+    "syntax": "Array.prototype.includes(searchElement, fromIndex)",
+    "example": "const array1 = [1, 2, 3];\n\nconsole.log(array1.includes(2));\n// Expected output: true\n\nconst pets = ['cat', 'dog', 'bat'];\n\nconsole.log(pets.includes('cat'));\n// Expected output: true\n\nconsole.log(pets.includes('at'));\n// Expected output: false\n"
+  },
+  {
+    "title": "Array.prototype.indexOf()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf",
+    "name": "indexOf",
+    "synopsis": "The **`indexOf()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances returns the first index at which a\ngiven element can be found in the array, or -1 if it is not present.",
+    "syntax": "Array.prototype.indexOf(searchElement, fromIndex)",
+    "example": "const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];\n\nconsole.log(beasts.indexOf('bison'));\n// Expected output: 1\n\n// Start from index 2\nconsole.log(beasts.indexOf('bison', 2));\n// Expected output: 4\n\nconsole.log(beasts.indexOf('giraffe'));\n// Expected output: -1\n"
+  },
+  {
+    "title": "Array.prototype.join()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join",
+    "name": "join",
+    "synopsis": "The **`join()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances creates and\nreturns a new string by concatenating all of the elements in this array,\nseparated by commas or a specified separator string. If the array has\nonly one item, then that item will be returned without using the separator.",
+    "syntax": "Array.prototype.join(separator)",
+    "example": "const elements = ['Fire', 'Air', 'Water'];\n\nconsole.log(elements.join());\n// Expected output: \"Fire,Air,Water\"\n\nconsole.log(elements.join(''));\n// Expected output: \"FireAirWater\"\n\nconsole.log(elements.join('-'));\n// Expected output: \"Fire-Air-Water\"\n"
+  },
+  {
+    "title": "Array.prototype.keys()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys",
+    "name": "keys",
+    "synopsis": "The **`keys()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each index in the array.",
+    "syntax": "Array.prototype.keys()",
+    "example": "const array1 = ['a', 'b', 'c'];\nconst iterator = array1.keys();\n\nfor (const key of iterator) {\n  console.log(key);\n}\n\n// Expected output: 0\n// Expected output: 1\n// Expected output: 2\n"
+  },
+  {
+    "title": "Array.prototype.entries()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/entries",
+    "name": "entries",
+    "synopsis": "The **`entries()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the key/value pairs for each index in the array.",
+    "syntax": "Array.prototype.entries()",
+    "example": "const array1 = ['a', 'b', 'c'];\n\nconst iterator1 = array1.entries();\n\nconsole.log(iterator1.next().value);\n// Expected output: Array [0, \"a\"]\n\nconsole.log(iterator1.next().value);\n// Expected output: Array [1, \"b\"]\n"
+  },
+  {
+    "title": "Array.prototype.values()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values",
+    "name": "values",
+    "synopsis": "The **`values()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the array.",
+    "syntax": "Array.prototype.values()",
+    "example": "const array1 = ['a', 'b', 'c'];\nconst iterator = array1.values();\n\nfor (const value of iterator) {\n  console.log(value);\n}\n\n// Expected output: \"a\"\n// Expected output: \"b\"\n// Expected output: \"c\"\n"
+  },
+  {
+    "title": "Array.prototype.forEach()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach",
+    "name": "forEach",
+    "synopsis": "The **`forEach()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances executes a provided function once\nfor each array element.",
+    "syntax": "Array.prototype.forEach(callbackFn, thisArg)",
+    "example": "const array1 = ['a', 'b', 'c'];\n\narray1.forEach((element) => console.log(element));\n\n// Expected output: \"a\"\n// Expected output: \"b\"\n// Expected output: \"c\"\n"
+  },
+  {
+    "title": "Array.prototype.filter()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter",
+    "name": "filter",
+    "synopsis": "The **`filter()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.",
+    "syntax": "Array.prototype.filter(callbackFn, thisArg)",
+    "example": "const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];\n\nconst result = words.filter((word) => word.length > 6);\n\nconsole.log(result);\n// Expected output: Array [\"exuberant\", \"destruction\", \"present\"]\n"
+  },
+  {
+    "title": "Array.prototype.flat()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat",
+    "name": "flat",
+    "synopsis": "The **`flat()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances creates a new array with all sub-array\nelements concatenated into it recursively up to the specified depth.",
+    "syntax": "Array.prototype.flat(depth)",
+    "example": "const arr1 = [0, 1, 2, [3, 4]];\n\nconsole.log(arr1.flat());\n// expected output: Array [0, 1, 2, 3, 4]\n\nconst arr2 = [0, 1, [2, [3, [4, 5]]]];\n\nconsole.log(arr2.flat());\n// expected output: Array [0, 1, 2, Array [3, Array [4, 5]]]\n\nconsole.log(arr2.flat(2));\n// expected output: Array [0, 1, 2, 3, Array [4, 5]]\n\nconsole.log(arr2.flat(Infinity));\n// expected output: Array [0, 1, 2, 3, 4, 5]\n"
+  },
+  {
+    "title": "Array.prototype.flatMap()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap",
+    "name": "flatMap",
+    "synopsis": "The **`flatMap()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) followed by a [`flat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) of depth 1 (`arr.map(...args).flat()`), but slightly more efficient than calling those two methods separately.",
+    "syntax": "Array.prototype.flatMap(callbackFn, thisArg)",
+    "example": "const arr1 = [1, 2, 1];\n\nconst result = arr1.flatMap((num) => (num === 2 ? [2, 2] : 1));\n\nconsole.log(result);\n// Expected output: Array [1, 2, 2, 1]\n"
+  },
+  {
+    "title": "Array.prototype.map()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map",
+    "name": "map",
+    "synopsis": "The **`map()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances creates\na new array populated with the results of calling a provided function on\nevery element in the calling array.",
+    "syntax": "Array.prototype.map(callbackFn, thisArg)",
+    "example": "const array1 = [1, 4, 9, 16];\n\n// Pass a function to map\nconst map1 = array1.map((x) => x * 2);\n\nconsole.log(map1);\n// Expected output: Array [2, 8, 18, 32]\n"
+  },
+  {
+    "title": "Array.prototype.every()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every",
+    "name": "every",
+    "synopsis": "The **`every()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances tests whether\nall elements in the array pass the test implemented by the provided function. It\nreturns a Boolean value.",
+    "syntax": "Array.prototype.every(callbackFn, thisArg)",
+    "example": "const isBelowThreshold = (currentValue) => currentValue < 40;\n\nconst array1 = [1, 30, 39, 29, 10, 13];\n\nconsole.log(array1.every(isBelowThreshold));\n// Expected output: true\n"
+  },
+  {
+    "title": "Array.prototype.some()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some",
+    "name": "some",
+    "synopsis": "The **`some()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances tests whether\nat least one element in the array passes the test implemented by the provided\nfunction. It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.",
+    "syntax": "Array.prototype.some(callbackFn, thisArg)",
+    "example": "const array = [1, 2, 3, 4, 5];\n\n// Checks whether an element is even\nconst even = (element) => element % 2 === 0;\n\nconsole.log(array.some(even));\n// Expected output: true\n"
+  },
+  {
+    "title": "Array.prototype.reduce()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce",
+    "name": "reduce",
+    "synopsis": "The **`reduce()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances executes a user-supplied \"reducer\" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.",
+    "syntax": "Array.prototype.reduce(callbackFn, initialValue)",
+    "example": "const array1 = [1, 2, 3, 4];\n\n// 0 + 1 + 2 + 3 + 4\nconst initialValue = 0;\nconst sumWithInitial = array1.reduce(\n  (accumulator, currentValue) => accumulator + currentValue,\n  initialValue,\n);\n\nconsole.log(sumWithInitial);\n// Expected output: 10\n"
+  },
+  {
+    "title": "Array.prototype.reduceRight()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight",
+    "name": "reduceRight",
+    "synopsis": "The **`reduceRight()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.",
+    "syntax": "Array.prototype.reduceRight(callbackFn, initialValue)",
+    "example": "const array1 = [\n  [0, 1],\n  [2, 3],\n  [4, 5],\n];\n\nconst result = array1.reduceRight((accumulator, currentValue) =>\n  accumulator.concat(currentValue),\n);\n\nconsole.log(result);\n// Expected output: Array [4, 5, 2, 3, 0, 1]\n"
+  },
+  {
+    "title": "Array.prototype.toLocaleString()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString",
+    "name": "toLocaleString",
+    "synopsis": "The **`toLocaleString()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances returns a string representing\nthe elements of the array. The elements are converted to strings using their\n`toLocaleString` methods and these strings are separated by a locale-specific\nstring (such as a comma \",\").",
+    "syntax": "Array.prototype.toLocaleString(locales, options)",
+    "example": "const array1 = [1, 'a', new Date('21 Dec 1997 14:12:00 UTC')];\nconst localeString = array1.toLocaleString('en', { timeZone: 'UTC' });\n\nconsole.log(localeString);\n// Expected output: \"1,a,12/21/1997, 2:12:00 PM\",\n// This assumes \"en\" locale and UTC timezone - your results may vary\n"
+  },
+  {
+    "title": "Array.prototype.toString()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString",
+    "name": "toString",
+    "synopsis": "The **`toString()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances returns a string representing the\nspecified array and its elements.",
+    "syntax": "Array.prototype.toString()",
+    "example": "const array1 = [1, 2, 'a', '1a'];\n\nconsole.log(array1.toString());\n// Expected output: \"1,2,a,1a\"\n"
+  },
+  {
+    "title": "Array.prototype.toReversed()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed",
+    "name": "toReversed",
+    "synopsis": "The **`toReversed()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) counterpart of the [`reverse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) method. It returns a new array with the elements in reversed order.",
+    "syntax": "Array.prototype.toReversed()",
+    "example": "const items = [1, 2, 3];\nconsole.log(items); // [1, 2, 3]\n\nconst reversedItems = items.toReversed();\nconsole.log(reversedItems); // [3, 2, 1]\nconsole.log(items); // [1, 2, 3]"
+  },
+  {
+    "title": "Array.prototype.toSorted()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted",
+    "name": "toSorted",
+    "synopsis": "The **`toSorted()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of the [`sort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) method. It returns a new array with the elements sorted in ascending order.",
+    "syntax": "Array.prototype.toSorted(compareFn)",
+    "example": "const months = [\"Mar\", \"Jan\", \"Feb\", \"Dec\"];\nconst sortedMonths = months.toSorted();\nconsole.log(sortedMonths); // ['Dec', 'Feb', 'Jan', 'Mar']\nconsole.log(months); // ['Mar', 'Jan', 'Feb', 'Dec']\n\nconst values = [1, 10, 21, 2];\nconst sortedValues = values.toSorted((a, b) => a - b);\nconsole.log(sortedValues); // [1, 2, 10, 21]\nconsole.log(values); // [1, 10, 21, 2]"
+  },
+  {
+    "title": "Array.prototype.toSpliced()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced",
+    "name": "toSpliced",
+    "synopsis": "The **`toSpliced()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of the [`splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method. It returns a new array with some elements removed and/or replaced at a given index.",
+    "syntax": "Array.prototype.toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)",
+    "example": "const months = [\"Jan\", \"Mar\", \"Apr\", \"May\"];\n\n// Inserting an element at index 1\nconst months2 = months.toSpliced(1, 0, \"Feb\");\nconsole.log(months2); // [\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\"]\n\n// Deleting two elements starting from index 2\nconst months3 = months2.toSpliced(2, 2);\nconsole.log(months3); // [\"Jan\", \"Feb\", \"May\"]\n\n// Replacing one element at index 1 with two new elements\nconst months4 = months3.toSpliced(1, 1, \"Feb\", \"Mar\");\nconsole.log(months4); // [\"Jan\", \"Feb\", \"Mar\", \"May\"]\n\n// Original array is not modified\nconsole.log(months); // [\"Jan\", \"Mar\", \"Apr\", \"May\"]"
+  },
+  {
+    "title": "Array.prototype.with()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with",
+    "name": "with",
+    "synopsis": "The **`with()`** method of [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of using the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation) to change the value of a given index. It returns a new array with the element at the given index replaced with the given value.",
+    "syntax": "Array.prototype.with(index, value)",
+    "example": "const arr = [1, 2, 3, 4, 5];\nconsole.log(arr.with(2, 6)); // [1, 2, 6, 4, 5]\nconsole.log(arr); // [1, 2, 3, 4, 5]"
+  }
+]

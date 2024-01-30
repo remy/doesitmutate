@@ -1,0 +1,25 @@
+<div id="{{method.name}}" class="method">
+  <h2>
+    <span>Array.prototype</span>.<a href="/{{method.name}}/">{{method.name}}</a>
+  </h2>
+  <p class="mutates {{'yes' if method.mutates else 'no'}}">
+    {% if method.mutates %}
+      Mutates
+    {% else %}
+      No mutation
+    {% endif %}
+  </p>
+  <h3>Description</h3>
+  {{ method.synopsis | markdown | safe}}
+  <p>
+    <style>
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+    <a href={{method.url}}>{{method.url}}</a>
+  </p>
+  <h3>Example</h3>
+  {{method.example | asCode | markdown | safe }}
+</div>
