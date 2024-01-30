@@ -10,7 +10,8 @@
     "singleQuote": true
   },
   "scripts": {
-    "dev": "DEBUG=-11ty* npx @11ty/eleventy --serve"
+    "dev": "DEBUG=-11ty* eleventy --serve",
+    "build": "eleventy"
   },
   "keywords": [],
   "author": "Remy Sharp",
