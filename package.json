@@ -11,7 +11,8 @@
   },
   "scripts": {
     "dev": "DEBUG=-11ty* eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "test": "node test/mutators.mjs"
   },
   "keywords": [],
   "author": "Remy Sharp",
